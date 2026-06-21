@@ -93,6 +93,15 @@ a {
   text-align: center;
 }
 
+.kicker,
+h1,
+.again,
+.hero-photo,
+.date {
+  position: relative;
+  z-index: 2;
+}
+
 .kicker {
   font-size: clamp(22px, 4vw, 32px);
   margin: 0;
@@ -160,8 +169,34 @@ h1 {
   width: clamp(72px, 10vw, 115px);
 }
 
+.motif-spiral {
+  left: 22%;
+  top: 16%;
+  width: clamp(62px, 9vw, 104px);
+  z-index: 0;
+}
+
+.motif-note {
+  left: 12%;
+  bottom: 28%;
+  width: clamp(54px, 8vw, 86px);
+}
+
+.motif-wave {
+  left: 7%;
+  bottom: 20%;
+  width: clamp(108px, 15vw, 160px);
+}
+
+.motif-tennis {
+  right: 15%;
+  bottom: 13%;
+  width: clamp(46px, 6vw, 72px);
+}
+
 .section {
   padding: clamp(58px, 8vw, 104px) clamp(18px, 4vw, 56px);
+  position: relative;
 }
 
 .section:nth-of-type(even) {
@@ -171,7 +206,71 @@ h1 {
 .section-inner {
   margin: 0 auto;
   max-width: 1120px;
+  position: relative;
   width: 100%;
+  z-index: 1;
+}
+
+.section-motif {
+  pointer-events: none;
+  position: absolute;
+  user-select: none;
+  z-index: 0;
+}
+
+.intro-star {
+  right: max(32px, 10vw);
+  top: 40px;
+  width: clamp(42px, 6vw, 76px);
+}
+
+.program-note {
+  left: max(24px, 7vw);
+  top: 70px;
+  transform: rotate(-8deg);
+  width: clamp(46px, 6vw, 78px);
+}
+
+.program-wave {
+  bottom: 42px;
+  right: max(28px, 9vw);
+  width: clamp(96px, 12vw, 142px);
+}
+
+.stay-tennis {
+  bottom: 48px;
+  left: max(34px, 7vw);
+  width: clamp(28px, 4vw, 46px);
+}
+
+.wishlist-heart {
+  right: max(24px, 9vw);
+  top: 52px;
+  width: clamp(34px, 5vw, 56px);
+}
+
+.wishlist-cookies {
+  bottom: 44px;
+  left: max(24px, 8vw);
+  width: clamp(78px, 10vw, 118px);
+}
+
+.wishlist-float {
+  bottom: 52px;
+  right: max(28px, 10vw);
+  width: clamp(58px, 8vw, 92px);
+}
+
+.final-lemon {
+  left: max(30px, 15vw);
+  top: 38px;
+  width: clamp(46px, 6vw, 72px);
+}
+
+.final-drinks {
+  right: max(24px, 8vw);
+  top: 18px;
+  width: clamp(62px, 8vw, 88px);
 }
 
 .narrow {
@@ -225,6 +324,10 @@ h3 {
 .notice-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   text-align: left;
+}
+
+.notice-wide {
+  grid-column: 1 / -1;
 }
 
 .notice,
@@ -375,6 +478,25 @@ ul {
     right: 0;
     top: 38%;
   }
+
+  .motif-spiral {
+    left: 18%;
+    top: 10%;
+  }
+
+  .motif-note,
+  .motif-wave {
+    display: none;
+  }
+
+  .program-note,
+  .program-wave,
+  .stay-tennis,
+  .wishlist-cookies,
+  .wishlist-float,
+  .final-drinks {
+    opacity: 0.55;
+  }
 }
 
 @media (max-width: 560px) {
@@ -409,6 +531,11 @@ ul {
   }
 
   .motif-sax {
+    display: none;
+  }
+
+  .motif-spiral,
+  .motif-tennis {
     display: none;
   }
 
@@ -453,5 +580,29 @@ ul {
   .packing img {
     margin-top: -42px;
     width: min(126px, 48%);
+  }
+
+  .section-motif {
+    opacity: 0.45;
+  }
+
+  .intro-star,
+  .program-note,
+  .program-wave,
+  .stay-tennis,
+  .wishlist-cookies,
+  .wishlist-float,
+  .final-drinks {
+    display: none;
+  }
+
+  .wishlist-heart {
+    right: 20px;
+    top: 24px;
+  }
+
+  .final-lemon {
+    left: 22px;
+    top: 24px;
   }
 }
