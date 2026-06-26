@@ -420,6 +420,10 @@ ul {
   max-width: 880px;
 }
 
+.wishlist .section-heading h3 {
+  margin-top: 28px;
+}
+
 .wish-list {
   list-style: none;
   margin-top: 34px;
